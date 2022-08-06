@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: sans-serif;
+}
+.flex-container-column {
+    display: flex;
+    flex-direction: column;
+    /* proper pendukung */
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: right;
+}
+.flex-container-row {
+    display: flex;
+}
+.button {
+    flex-basis: 25%;
+    /* proper pendukung */
+    font-size: 1.5em;
+    text-align: center;
+    padding: 40px;
+    border: 1px solid black;
+    background: -webkit-linear-gradient(top,#d2d2d2, #ddd);
+    cursor: pointer;
+}
+.double {
+    flex-basis: 50%;
+}
+
+
