@@ -1,24 +1,29 @@
 // objek
 const calculator = {
+  // properti
   displayNumber: "0",
-  operartor: null,
+  operator: null,
   firstNumber: null,
   isWaitForSecondNumber: false,
 };
 // fungsi
 function updateDisplay() {
-  document.querySelector("#displaynumber").innertext = calculator.displayNumber;
+  document.querySelector("#displayNumber").innerText = calculator.displayNumber;
 }
 
 function clearCalculator() {
   calculator.displayNumber = "0";
-  calculator.operartor = null;
+  calculator.operator = null;
   calculator.firstNumber = null;
   calculator.isWaitForSecondNumber = false;
 }
 
 function inputDigit(digit) {
-  calculator.displayNumber += digit;
+  if (calculator.displayNumber === "0") {
+    calculator.displayNumber = digit;
+  } else {
+    calculator.displayNumber += digit;
+  }
 }
 
 // variable
@@ -29,7 +34,7 @@ for (const button of buttons) {
     // mendapatkan objek elemen yang dilkik
     const target = event.target;
 
-    inputDigit(target.innertext);
+    inputDigit(target.innerText);
     updateDisplay();
   });
 }
